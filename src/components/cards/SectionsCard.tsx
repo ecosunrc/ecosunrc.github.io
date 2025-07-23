@@ -21,7 +21,7 @@ export default function BackgroundBlogCard({
         </div>
       </Card.Header>
       <Card.Body className="relative bottom-0 flex h-full flex-col items-center justify-end px-6 py-14 md:px-12">
-        <Typography type="h4" className="text-white">
+        <Typography type="h4" className="text-white font-serif">
           {description}
         </Typography>
         <Typography type="h2" className="my-6 text-black py-2 px-4 bg-white rounded-lg shadow-lg">
