@@ -24,7 +24,7 @@ const config: Config = {
   darkMode: 'class',
   plugins: [
     mtConfig,
-    require('tailwind-scrollbar')({ nocompatible: true }),
+    require('tailwind-scrollbar'),
     function ({ addUtilities }: { addUtilities: any }) {
       addUtilities(
         {

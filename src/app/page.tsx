@@ -5,7 +5,7 @@ import CarouselComponent from "@/components/Carousel";
 import ScrollSection from "@/components/SectionScroll";
 import Sections from "@/components/Sections";
 
-const sectionNames = ["home", "section1", "section2", "section3"];
+const sectionNames = ["home", "section1", "section2", "section3", "footer"];
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -13,20 +13,22 @@ export default function Home() {
   const [isIndexCollapsed, setIsIndexCollapsed] = useState<boolean>(true);
 
   const handleScroll = useCallback((event: WheelEvent) => {
-    if (event.deltaY > 0) {
-      if (currentSection < sectionNames.length - 1) {
-        const nextSection = currentSection + 1;
-        scroller.scrollTo(sectionNames[nextSection], scrollOptions);
-        setCurrentSection(nextSection);
-      }
-    } else if (event.deltaY < 0) {
-      if (currentSection > 0) {
-        const prevSection = currentSection - 1;
-        scroller.scrollTo(sectionNames[prevSection], scrollOptions);
-        setCurrentSection(prevSection);
-      }
+  if (event.deltaY > 0) {
+    if (currentSection < sectionNames.length - 2) {
+      const nextSection = currentSection + 1;
+      scroller.scrollTo(sectionNames[nextSection], scrollOptions);
+      setCurrentSection(nextSection);
+    } else {
+      scrollToBottom();
     }
-  }, [currentSection]);
+  } else if (event.deltaY < 0) {
+    if (currentSection > 0) {
+      const prevSection = currentSection - 1;
+      scroller.scrollTo(sectionNames[prevSection], scrollOptions);
+      setCurrentSection(prevSection);
+    }
+  }
+}, [currentSection]);
 
   useEffect(() => {
     window.addEventListener("wheel", handleScroll, { passive: false });
