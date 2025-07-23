@@ -2,10 +2,10 @@
 import Image from "next/image";
 import { SocialMediaLink } from "./Links";
 
-const SocialMediaIcon: React.FC<SocialMediaLink> = ({src, type}) => {
+export default function SocialMediaIcon({ src, type }: SocialMediaLink) {
   return (
     <a href={src} target="_blank" rel="noopener noreferrer">
-      <div className="bg-white hover:bg-black transition-all duration-200 rounded-full">
+      <div className="bg-black hover:bg-white transition-all duration-200 rounded-full">
         <Image
           src={`/${type}.svg`}
           alt={`${type} ico`}
@@ -16,5 +16,3 @@ const SocialMediaIcon: React.FC<SocialMediaLink> = ({src, type}) => {
     </a>
   );
 };
-
-export default SocialMediaIcon;

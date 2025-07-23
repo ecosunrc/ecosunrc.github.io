@@ -6,7 +6,45 @@ interface CarouselComponentProps {
   deviceType?: string;
 }
 
-const CarouselComponent: React.FC<CarouselComponentProps> = ({ deviceType }) => {
+const CarouselItems = [
+  {
+    src: "/logo.svg",
+    alt: "logoloco",
+    title: "Nace nueva revista: Ecos",
+  },
+  {
+    src: "/image1.jpg",
+    alt: "Image 1",
+    title: "Paisaje 1",
+  },
+  {
+    src: "/image2.jpg",
+    alt: "Image 2", 
+    title: "Paisaje 2",
+  },  
+  {
+    src: "/image3.jpg",
+    alt: "Image 3",
+    title: "BOOOOOOOOCAAAAAAA",
+  },
+  {
+    src: "/image4.jpg",
+    alt: "Image 4",
+    title: "Boca se enfrenta a Atlético Tucumán en la Copa Argentina",
+  },
+  {
+    src: "/image5.webp",
+    alt: "Image 5",
+    title: "Caputo y su bicicleta financiera",
+  },
+  {
+    src: "/image6.jpg",
+    alt: "Image 6",
+    title: "La UNRC abre sus puertas luego del receso invernal",
+  },
+];
+
+export default function CarouselComponent({ deviceType = "desktop" }: CarouselComponentProps) {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -31,59 +69,31 @@ const CarouselComponent: React.FC<CarouselComponentProps> = ({ deviceType }) => 
       draggable={false}
       showDots={true}
       responsive={responsive}
-      ssr={true} // means to render carousel on server-side.
+      ssr={true}
       infinite={true}
       autoPlay={deviceType !== "mobile" ? true : false}
-      autoPlaySpeed={3000}
-      keyBoardControl={true}
-      customTransition="all .5"
-      transitionDuration={0}
+      customTransition="all ease-in-out .9"
       containerClass="carousel-container"
       removeArrowOnDeviceType={["tablet", "mobile"]}
       deviceType={deviceType}
       dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px flex justify-center items-center"
-      className="carousel-component w-1/2 h-1/2"
-      centerMode={false}
+      itemClass="carousel-item-padding-40-px flex justify-center items-center !p-0 !m-0"
+      className="carousel-component w-full h-screen"
     >
-      <div className="news1 h-full flex flex-col justify-end items-center">
-        <Image
-          src="logo.svg"
-          alt="logoloco"
-          width={600}
-          height={400}
-        />
-        <h2 className="text-2xl font-bold text-center mt-4">Nace nueva revista: Ecos</h2>
-      </div>
-      <div className="news2 h-full flex flex-col justify-end items-center">
-        <Image
-          src="/image1.jpg"
-          alt="Image 1"
-          width={600}
-          height={400}
-        />
-        <h2 className="text-2xl font-bold text-center mt-4">La bicicleta financiera no frena</h2>
-      </div>
-      <div className="news3 h-full flex flex-col justify-end items-center">
-        <Image
-          src="/image2.jpg"
-          alt="Image 2"
-          width={600}
-          height={400}
-        />
-        <h2 className="text-2xl font-bold text-center mt-4">Se viene</h2>
-      </div>
-      <div className="news4 h-full flex flex-col justify-end items-center">
-        <Image
-          src="/image3.jpg"
-          alt="Image 3"
-          width={600}
-          height={400}
-        />
-        <h2 className="text-2xl font-bold text-center mt-4">BOOOOOOOOCAAAAAAA</h2>
-      </div>
+      {CarouselItems.map((item, index) => (
+        <>
+          <div key={index} className="w-full h-screen">
+            <Image
+              src={item.src}
+              alt={item.alt}
+              fill={true}
+              className="fill object-fit w-full h-full" />
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-8 mb-8">
+            <h2 className="text-2xl font-bold text-center text-white/100">{item.title}</h2>
+          </div>
+        </>
+      ))}
     </Carousel>
   );
 };
-
-export default CarouselComponent;

@@ -10,7 +10,7 @@ interface SideNavProps {
   linksDropdown: TypeLink[];
 }
 
-const SideNav: React.FC<SideNavProps> = ({ linksNav, linksDropdown }) => {
+export default function SideNav({ linksNav, linksDropdown }: SideNavProps) {
   const pathname = usePathname().split("/")[1];
  
   return (
@@ -23,7 +23,7 @@ const SideNav: React.FC<SideNavProps> = ({ linksNav, linksDropdown }) => {
         <Link
           key={link.name}
           href={link.href}
-          className={`text-lg p-3 hover:bg-base1 transition-all duration-300 ${pathname === link.href.split("/")[1] ? 'text-base1 underline font-bold' : ''}`}
+          className={`text-lg p-3 hover:bg-base2 transition-all duration-300 ${pathname === link.href.split("/")[1] ? 'text-base1 underline font-bold' : ''}`}
         >
           {link.name}
         </Link>
@@ -31,5 +31,3 @@ const SideNav: React.FC<SideNavProps> = ({ linksNav, linksDropdown }) => {
     </nav>
   );
 };
-
-export default SideNav;

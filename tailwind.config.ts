@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { mtConfig } from "@material-tailwind/react";
 
 const config: Config = {
   content: [
@@ -6,6 +7,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/tailwind-datepicker-react/dist/**/*.js',
+    "./node_modules/@material-tailwind/react/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -21,6 +23,8 @@ const config: Config = {
   },
   darkMode: 'class',
   plugins: [
+    mtConfig,
+    require('tailwind-scrollbar')({ nocompatible: true }),
     function ({ addUtilities }: { addUtilities: any }) {
       addUtilities(
         {
