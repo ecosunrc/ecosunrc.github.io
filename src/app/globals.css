@@ -1,19 +1,44 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Serif elegantes (para títulos, citas, artículos largos) */
+  --font-serif-georgia: 'Georgia', serif;
+  --font-serif-merriweather: 'Merriweather', serif;
+  --font-serif-playfair: 'Playfair Display', serif;
+
+  /* Sans-serif modernos (para cuerpo, UI) */
+  --font-sans-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-sans-geist: var(--font-geist-sans, 'Geist', sans-serif); /* Si la estás usando */
+  --font-sans-inter: 'Inter', sans-serif;
+  --font-sans-open-sans: 'Open Sans', sans-serif;
+
+  /* Alternativas o acento */
+  --font-alt-raleway: 'Raleway', sans-serif;
+  --font-alt-lora: 'Lora', serif;
+
+  /* Monoespaciadas */
+  --font-mono-fira: 'Fira Code', monospace;
+  --font-mono-geist: var(--font-geist-mono, 'Geist Mono', monospace);
 }
+
 @theme {
-  --color-base1: #13738e;
-  --color-base2: #d27721;
+  --color-base1: #194b4d;
+  --color-base2: #ffb454;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Asignación principal */
+  --font-sans: var(--font-sans-inter);
+  --font-serif: var(--font-serif-merriweather);
+  --font-mono: var(--font-mono-fira);
+  --font-body: var(--font-sans);
+  --font-display: var(--font-serif-playfair); /* Para títulos grandes */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +51,27 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 6rem;
+  font-family: var(--font-display, var(--font-serif-playfair));
+}
+
+h2 {
+  font-size: 2rem; /* ≈ 32px */
+  font-family: var(--font-display, var(--font-serif-playfair));
+}
+
+h3 {
+  font-size: 1.5rem; /* ≈ 24px */
+  font-family: var(--font-body, var(--font-sans-inter));
 }

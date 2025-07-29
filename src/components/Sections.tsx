@@ -1,5 +1,5 @@
 import React from 'react';
-import { linksNav } from './Links'; // Assuming Links is an array of objects with href and name properties
+import { linksNav } from './Links';
 import SectionsCard from './cards/SectionsCard';
 
 export default function Sections() {

@@ -1,6 +1,6 @@
 'use client';
-import { Element } from "react-scroll";
-import React from "react";
+import { Element } from 'react-scroll';
+import React from 'react';
 
 type ScrollSectionProps = {
   name: string;
@@ -8,7 +8,7 @@ type ScrollSectionProps = {
   children: React.ReactNode;
 };
 
-export default function ScrollSection({ name, className = "", children }: ScrollSectionProps) {
+export default function ScrollSection({ name, className = '', children }: ScrollSectionProps) {
   return (
     <Element name={name}>
       <section className={`h-screen flex items-center justify-center ${className}`}>
