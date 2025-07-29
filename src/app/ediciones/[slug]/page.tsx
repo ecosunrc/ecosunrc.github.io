@@ -26,7 +26,7 @@ export default async function EdicionPage({ params }: any) {
     <div className='bg-gradient-to-b from-base2/50 to-base2/100 p-8 '>
       <div className='flex flex-col justify-center max-w-3xl mx-auto h-screen'>
         <iframe
-          src={`/ediciones/pdfs/${params.slug}.pdf#view=TwoPageView`}
+          src={`/ediciones/pdfs/edicion${params.slug}.pdf#view=TwoPageView`}
           className='w-full h-full mt-6'
           title={`PDF de ${data.title}`}
         />
