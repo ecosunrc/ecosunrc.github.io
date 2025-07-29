@@ -4,23 +4,8 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-type Props = {
-  params: { slug: string };
-};
-
-export async function generateStaticParams() {
-  const edicionesDir = path.join(process.cwd(), 'public', 'ediciones');
-  const files = fs.readdirSync(edicionesDir);
-
-  return files
-    .filter(file => file.endsWith('.md'))
-    .map(file => ({
-      slug: file.replace(/\.md$/, ''),
-    }));
-}
-
-export default async function EdicionPage({ params }: Props) {
-  const filePath = path.join(process.cwd(), 'public', 'ediciones', `${params.slug}.md`);
+export default async function EdicionPage() {
+  const filePath = path.join(process.cwd(), 'public', 'ediciones', '1.md');
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
   const processedContent = await remark().use(html).process(content);
