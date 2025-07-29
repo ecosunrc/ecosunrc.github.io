@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroui/card": "^2.2.23",
     "@material-tailwind/react": "^3.0.0-beta.24",
+    "gray-matter": "^4.0.3",
     "next": "15.4.1",
-    "react": "19.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-multi-carousel": "^2.8.6",
     "react-scroll": "^1.9.3",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "tailwind-scrollbar": "^4.0.2"
   },
   "devDependencies": {

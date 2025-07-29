@@ -23,7 +23,7 @@ export default function SideNav({ linksNav, linksDropdown }: SideNavProps) {
         <Link
           key={link.name}
           href={link.href}
-          className={`text-lg p-3 hover:bg-base1 hover:text-white transition-all duration-300 ${pathname === link.href.split('/')[1] ? 'bg-base1 underline font-bold' : ''}`}
+          className={`text-lg p-3 hover:bg-base1 hover:text-white transition-all duration-300 ${pathname === link.href.split('/')[1] ? 'bg-base1 underline font-bold text-white' : ''}`}
         >
           {link.name}
         </Link>

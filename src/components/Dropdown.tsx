@@ -17,9 +17,9 @@ export default function Dropdown({ name, linksDropdown }: DropdownProps) {
     <div onMouseLeave={() => setIsSidebarCollapsed(true)} className='relative cursor-pointer items-center justify-center w-fit' >
       <div
         onMouseEnter={() => setIsSidebarCollapsed(false)}
-        className={`text-lg p-3 hover:text-white ${isSidebarCollapsed? '' : 'bg-base1 shadow-md'} ${pathname === 'editions' ? 'bg-base1 underline font-bold' : ''} transition-all duration-300`}
+        className={`text-lg p-3 hover:text-white ${isSidebarCollapsed? '' : 'bg-base1 shadow-md'} ${pathname === 'ediciones' ? 'bg-base1 underline font-bold text-white' : ''} transition-all duration-300`}
       >
-        <Link href='/editions' >
+        <Link href='/ediciones' >
           {name}
         </Link>
       </div>

@@ -24,12 +24,12 @@ export const linksNav: SectionCardLinks[] = [
 ];
 
 export const linksDropdown: TypeLink[] = [
-  { name: '1', href: '/1' },
-  { name: '2', href: '/2' },
+  { name: '1', href: 'ediciones/1' },
+  { name: '2', href: 'ediciones/2' },
 ];
 
 export const linksSocialMedia: SocialMediaLink[] = [
-  { type: 'wsp', src: 'https://w.app/g8jnqr' },
+  { type: 'wsp', src: 'https://wa.me/+5493584377720' },
   { type: 'ig', src: 'https://www.instagram.com/ecosunrc' },
   { type: 'twitter', src: 'https://www.x.com/' }
 ];

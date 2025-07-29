@@ -16,32 +16,32 @@ const CarouselItems = [
   {
     src: '/image1.jpg',
     alt: 'Image 1',
-    title: 'Paisaje 1',
+    title: 'Vuelta a la Uni',
   },
   {
     src: '/image2.jpg',
     alt: 'Image 2', 
-    title: 'Paisaje 2',
+    title: 'La biblioteca, el mejor lugar para estudiar',
   },  
   {
     src: '/image3.jpg',
     alt: 'Image 3',
-    title: 'BOOOOOOOOCAAAAAAA',
+    title: 'Compu',
   },
   {
     src: '/image4.jpg',
     alt: 'Image 4',
-    title: 'Boca se enfrenta a Atlético Tucumán en la Copa Argentina',
+    title: 'Todo pixeleado',
   },
   {
-    src: '/image5.webp',
+    src: '/image5.jpeg',
     alt: 'Image 5',
-    title: 'Caputo y su bicicleta financiera',
+    title: 'Gran marcha por la educación',
   },
   {
-    src: '/image6.jpg',
+    src: '/image6.webp',
     alt: 'Image 6',
-    title: 'La UNRC abre sus puertas luego del receso invernal',
+    title: 'Los nodos reclaman por salarios dignos',
   },
 ];
 
