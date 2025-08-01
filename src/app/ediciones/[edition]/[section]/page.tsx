@@ -1,28 +1,38 @@
-'use client';
-
-import { sectionsData } from '@/data/sectionsData';
 import { editionsData } from '@/data/editionsData';
-import { redirect, useParams } from 'next/navigation';
+import { sectionsData } from '@/data/sectionsData';
+import { notFound } from 'next/navigation';
+import SectionByEditionClient from './SectionByEdition';
 
+type Props = {
+  params: Promise<{
+    edition: string;
+    section: string;
+  }>;
+};
 
-export default function SectionByEdition() {
-  const { section } = useParams();
-  const { edition } = useParams();
-  const editionNumber = Number(edition); 
+export default async function SectionByEditionPage({ params }: Props) {
+  const editionNumber = Number((await params).edition);
+  if (isNaN(editionNumber)) {
+    notFound();
+  }
   const editionData = editionsData[editionNumber];
-  const sectionData = sectionsData[section as keyof typeof sectionsData];
+  const sectionData = sectionsData[(await params).section as keyof typeof sectionsData];
 
-  if (!editionData) {
-    redirect('/ediciones/');
+  if (!editionData || !sectionData) {
+    notFound();
   }
 
-  if (!sectionData) {
-    redirect(`/ediciones/${edition}`);
-  }
+  return <SectionByEditionClient editionData={editionData} sectionData={sectionData} />;
+}
 
-  return (
-    <div className='flex bg-gradient-to-b from-base2/50 to-base2/100 px-4 py-8 min-h-screen text-white justify-center items-center'>
-      <h4>Contenido de la {sectionData.section} de la edición {editionData.number}</h4>
-    </div>
+export async function generateStaticParams() {
+  const editions = Object.keys(editionsData);
+  const sections = Object.keys(sectionsData);
+
+  return editions.flatMap((edition) =>
+    sections.map((section) => ({
+      edition,
+      section,
+    }))
   );
 }

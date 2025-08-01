@@ -33,7 +33,7 @@ export default function NotaEstudiantil() {
         nombre='Celeste Escudero'
         fecha='Junio, 2025'
         cita='Cada vez se venden menos menúes, cada vez son menos los estudiantes que acceden y cada vez es más alto el costo y menor la calidad. El menú existe como una política histórica de bienestar que intenta que el estudiante se pueda sostener en la universidad.'
-        imagen='/imagenes/entrevistados/Celeste-Escudero.png'
+        imagen='/imagenes/entrevistados/celeste-escudero.jpg'
       />
 
       <h2>Reflexión final</h2>
