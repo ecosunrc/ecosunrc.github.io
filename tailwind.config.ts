@@ -19,12 +19,34 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        // Roles semánticos
+        body: ['Libre Franklin', 'sans-serif'],
+        display: ['Lora', 'serif'],
+        subtitle: ['Playfair Display', 'serif'],
+        accent: ['Truculenta', 'sans-serif'],
+        button: ['Winky Rough', 'sans-serif'],
+        ui: ['Libre Franklin', 'sans-serif'],
+        alt: ['Mouse Memoirs', 'sans-serif'],
+
+        // Familias crudas por si querés acceso directo también
+        geist: ['Geist', 'sans-serif'],
+        merriweather: ['Merriweather', 'serif'],
+        yeseva: ['Yeseva One', 'serif'],
+        lora: ['Lora', 'serif'],
+        playfair: ['Playfair Display', 'serif'],
+        truculenta: ['Truculenta', 'sans-serif'],
+        winkySans: ['Winky Sans', 'sans-serif'],
+        winkyRough: ['Winky Rough', 'sans-serif'],
+        mouse: ['Mouse Memoirs', 'sans-serif'],
+      }
     },
   },
   darkMode: 'class',
   plugins: [
     mtConfig,
     require('tailwind-scrollbar'),
+    require('@tailwindcss/typography'),
     function ({ addUtilities }: { addUtilities: any }) {
       addUtilities(
         {

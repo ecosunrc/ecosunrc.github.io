@@ -7,35 +7,53 @@ import { TypeLink } from './Links';
 interface DropdownProps {
   name: string;
   linksDropdown: TypeLink[];
-};
+  isMobile?: boolean;
+}
 
-export default function Dropdown({ name, linksDropdown }: DropdownProps) {
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = React.useState<boolean>(true);
-  const pathname = usePathname().split('/')[1];
+export default function Dropdown({ name, linksDropdown, isMobile = false }: DropdownProps) {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const pathname = usePathname().split('ediciones/')[1];
+
+  const toggleDropdown = () => setIsOpen((prev) => !prev);
+  const closeDropdown = () => setIsOpen(false);
 
   return (
-    <div onMouseLeave={() => setIsSidebarCollapsed(true)} className='relative cursor-pointer items-center justify-center w-fit' >
+    <div
+      className={`relative ${isMobile ? '' : 'cursor-pointer'} w-fit`}
+      onMouseLeave={!isMobile ? closeDropdown : undefined}
+    >
       <div
-        onMouseEnter={() => setIsSidebarCollapsed(false)}
-        className={`text-lg p-3 hover:text-white ${isSidebarCollapsed? '' : 'bg-base1 shadow-md'} ${pathname === 'ediciones' ? 'bg-base1 underline font-bold text-white' : ''} transition-all duration-300`}
+        onClick={isMobile ? toggleDropdown : undefined}
+        onMouseEnter={!isMobile ? () => setIsOpen(true) : undefined}
+        className={`hover:underline hover:scale-105 text-lg xl:p-3  ${
+          pathname === 'ediciones' ? 'underline' : ''
+        } ${isOpen? 'xl:underline' : ''}
+        `}
       >
-        <Link href='/ediciones' >
+        <Link href='/ediciones'>
           {name}
         </Link>
       </div>
-      <div className='absolute grid bg-white shadow-lg z-10 text-black w-full' >
-        {!isSidebarCollapsed && linksDropdown.map((link) => 
-          (
+
+      {isOpen && !isMobile && (
+        <div
+          className='absolute grid shadow-lg z-10 w-full bg-white text-black'
+        >
+          {linksDropdown.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`${pathname === link.href.split('/')[1] ? 'bg-base1 text-white' : 'hover:bg-base1 hover:text-white'} p-2`}
+              className={`p-2 hover:bg-base1 hover:text-white ${
+                pathname === link.href.split('ediciones/')[1]
+                  ? 'bg-base1 text-white'
+                  : ''
+              }`}
             >
               {link.name}
             </Link>
-          )
-        )}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

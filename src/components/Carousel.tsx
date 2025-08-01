@@ -1,100 +1,57 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from 'next/image';
+import { sectionsData } from '@/data/sectionsData';
 
 interface CarouselComponentProps {
   deviceType?: string;
 }
-
-const CarouselItems = [
-  {
-    src: '/logo-square.svg',
-    alt: 'logoloco',
-    title: 'Nace nueva revista: Ecos',
-    className: 'p-20',
-  },
-  {
-    src: '/image1.jpg',
-    alt: 'Image 1',
-    title: 'Vuelta a la Uni',
-  },
-  {
-    src: '/image2.jpg',
-    alt: 'Image 2', 
-    title: 'La biblioteca, el mejor lugar para estudiar',
-  },  
-  {
-    src: '/image3.jpg',
-    alt: 'Image 3',
-    title: 'Compu',
-  },
-  {
-    src: '/image4.jpg',
-    alt: 'Image 4',
-    title: 'Todo pixeleado',
-  },
-  {
-    src: '/image5.jpeg',
-    alt: 'Image 5',
-    title: 'Gran marcha por la educación',
-  },
-  {
-    src: '/image6.webp',
-    alt: 'Image 6',
-    title: 'Los nodos reclaman por salarios dignos',
-  },
-];
 
 export default function CarouselComponent({ deviceType = 'desktop' }: CarouselComponentProps) {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
-      slidesToSlide: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2 // optional, default to 1.
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 1024, min: 0 },
       items: 1,
-      slidesToSlide: 1 // optional, default to 1.
-    }
+    },
   };
 
   return (
     <Carousel
-      swipeable={false}
-      draggable={false}
+      swipeable={true}
+      draggable={true}
       showDots={true}
       responsive={responsive}
       ssr={true}
       infinite={true}
-      autoPlay={deviceType !== 'mobile' ? true : false}
-      customTransition='all ease-in-out .9'
+      autoPlay={deviceType !== 'mobile'}
+      customTransition='all ease-in-out .9s'
       containerClass='carousel-container'
       removeArrowOnDeviceType={['tablet', 'mobile']}
       deviceType={deviceType}
       dotListClass='custom-dot-list-style'
-      itemClass='carousel-item-padding-40-px flex justify-center items-center !p-0 !m-0'
+      itemClass='carousel-item-padding-40-px flex justify-center items-center'
       className='carousel-component w-full h-screen'
     >
-      {CarouselItems.map((item, index) => (
-        <>
-          <div key={index} className='w-full h-screen'>
-            <Image
-              src={item.src}
-              alt={item.alt}
-              fill={true}
-              className={`fill object-fit w-full h-full ${item.className}`} />
+      {Object.values(sectionsData).map((item, index) => (
+        <div key={index} className='relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh]'>
+          <Image
+            src={item.lastImage}
+            alt={item.alt}
+            fill
+            className={`object-fit w-full h-full ${item.className || ''}`}
+            sizes='(max-width: 768px) 100vw, 100vw'
+          />
+          <div className='absolute bottom-0 left-0 right-0 bg-black/50 p-4'>
+            <h1 className='text-center text-white'>
+              {item.title}
+            </h1>
           </div>
-          <div className='absolute bottom-0 left-0 right-0 bg-black/50 p-8 mb-8'>
-            <h2 className='text-2xl font-bold text-center text-white/100'>{item.title}</h2>
-          </div>
-        </>
+        </div>
       ))}
     </Carousel>
   );
-};
+}

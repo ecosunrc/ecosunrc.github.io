@@ -11,7 +11,7 @@ type ScrollSectionProps = {
 export default function ScrollSection({ name, className = '', children }: ScrollSectionProps) {
   return (
     <Element name={name}>
-      <section className={`h-screen flex items-center justify-center ${className}`}>
+      <section className={`min-h-screen-1/2 sm:min-h-screen w-full flex flex-col items-center justify-center p-4 lg:p-0 ${className}`}>
         {children}
       </section>
     </Element>

@@ -20,12 +20,8 @@ export default function RootLayout({
         <link rel='icon' href='/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Inter&family=Merriweather&family=Playfair+Display&family=Fira+Code&display=swap'
-          rel='stylesheet'
-        />
       </head>
-      <body>
+      <body className='max-w-screen-sm sm:max-w-screen mx-auto'>
         <Header />
         {children}
         <Footer />

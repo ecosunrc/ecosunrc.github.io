@@ -1,27 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Libre+Franklin:ital,wght@0,900;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Mouse+Memoirs&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Truculenta:opsz,wdth,wght@12..72,112.5,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yeseva+One&display=swap');
 @import 'tailwindcss';
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 
   /* Serif elegantes (para títulos, citas, artículos largos) */
-  --font-serif-georgia: 'Georgia', serif;
-  --font-serif-merriweather: 'Merriweather', serif;
-  --font-serif-playfair: 'Playfair Display', serif;
+  --font-serif-merriweather: 'Merriweather', serif; /* Italic, Weight 300-900 */
+  --font-serif-playfair: 'Playfair Display', serif; /* Italic, Weight 400-900 */
+  --font-serif-yeseva: 'Yeseva One', serif; /* Static */
+  --font-serif-lora: 'Lora', serif; /* Italic, Weight 400-700 */
 
   /* Sans-serif modernos (para cuerpo, UI) */
-  --font-sans-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-sans-geist: var(--font-geist-sans, 'Geist', sans-serif); /* Si la estás usando */
-  --font-sans-inter: 'Inter', sans-serif;
-  --font-sans-open-sans: 'Open Sans', sans-serif;
-
-  /* Alternativas o acento */
-  --font-alt-raleway: 'Raleway', sans-serif;
-  --font-alt-lora: 'Lora', serif;
-
-  /* Monoespaciadas */
-  --font-mono-fira: 'Fira Code', monospace;
-  --font-mono-geist: var(--font-geist-mono, 'Geist Mono', monospace);
+  --font-sans-geist: 'Geist', sans-serif; /* Weight 100-900 */
+  --font-sans-truculenta: 'Truculenta', sans-serif; /* Weight 100-900 */
+  --font-sans-libre-franklin: 'Libre Franklin', sans-serif; /* Italic */
+  --font-sans-winky-sans: 'Winky Sans', sans-serif; /* Italic, Weight 300-900 */
+  --font-sans-winky-rough: 'Winky Rough', sans-serif; /* Italic, Weight 300-900 */
+  --font-sans-mouse-memoirs: 'Mouse Memoirs', sans-serif; /* Static */
 }
 
 @theme {
@@ -33,13 +30,26 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Asignación principal */
-  --font-sans: var(--font-sans-inter);
-  --font-serif: var(--font-serif-merriweather);
-  --font-mono: var(--font-mono-fira);
-  --font-body: var(--font-sans);
-  --font-display: var(--font-serif-playfair); /* Para títulos grandes */
+  /* Aplicación por uso */
+  --font-body: var(--font-sans-libre-franklin);      /* Texto general */
+  --font-display: var(--font-serif-lora);       /* Títulos grandes */
+  --font-subtitle: var(--font-serif-playfair);        /* Subtítulos o destacados */
+  --font-accent: var(--font-sans-truculenta);       /* Para acentos decorativos */
+  --font-button: var(--font-sans-winky-rough);      /* Botones o elementos expresivos */
+  --font-ui: var(--font-sans-libre-franklin);       /* Elementos de interfaz */
+  --font-alt: var(--font-sans-mouse-memoirs);       /* Alternativa lúdica o destacada */
+  --font-serif: var(--font-serif-merriweather);      /* Serif elegante para artículos largos */
+  --font-yeseva: var(--font-serif-yeseva);      /* Serif para títulos o citas */
+  --font-lora: var(--font-serif-lora);          /* Serif para subtítulos */
+  --font-playfair: var(--font-serif-playfair);  /* Serif para títulos destacados */
+  --font-truculenta: var(--font-sans-truculenta)
+  --font-winkySans: var(--font-sans-winky-sans)
+  --font-winkyRough: var(--font-sans-winky-rough)
+  --font-mouse: var(--font-sans-mouse-memoirs);
+  --font-geist: var(--font-sans-geist);
+  --font-merriweather: var(--font-serif-merriweather);
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -51,27 +61,100 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-body);
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-  line-height: 1.2;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 6rem;
-  font-family: var(--font-display, var(--font-serif-playfair));
+  font-family: var(--font-sans-truculenta);
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1;
 }
 
 h2 {
-  font-size: 2rem; /* ≈ 32px */
-  font-family: var(--font-display, var(--font-serif-playfair));
+  font-family: var(--font-serif-playfair);
+  font-weight: 700;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1;
 }
 
 h3 {
-  font-size: 1.5rem; /* ≈ 24px */
-  font-family: var(--font-body, var(--font-sans-inter));
+  font-family: var(--font-sans-truculenta);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+h4 {
+  font-family: var(--font-serif-lora);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-family: var(--font-serif-merriweather);
+  font-weight: 300;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 6rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.25rem;
+  }
 }
