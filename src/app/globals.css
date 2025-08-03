@@ -45,9 +45,9 @@
   --font-yeseva: var(--font-serif-yeseva);      /* Serif para títulos o citas */
   --font-lora: var(--font-serif-lora);          /* Serif para subtítulos */
   --font-playfair: var(--font-serif-playfair);  /* Serif para títulos destacados */
-  --font-truculenta: var(--font-sans-truculenta)
-  --font-winkySans: var(--font-sans-winky-sans)
-  --font-winkyRough: var(--font-sans-winky-rough)
+  --font-truculenta: var(--font-sans-truculenta);
+  --font-winkySans: var(--font-sans-winky-sans);
+  --font-winkyRough: var(--font-sans-winky-rough);
   --font-mouse: var(--font-sans-mouse-memoirs);
   --font-geist: var(--font-sans-geist);
   --font-merriweather: var(--font-serif-merriweather);

@@ -12,7 +12,7 @@ export const sectionsData = {
   estudiantil: {
     section: 'estudiantil',
     title: '¿Qué modelo de universidad queremos defender?',
-    lastImage: '/imagenes/portadas/estudiantil.jpg',
+    lastImage: '/ediciones/1/estudiantil-1.jpg',
     images: [],
     link: '/estudiantil',
     className: '',
