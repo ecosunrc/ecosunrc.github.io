@@ -1,4 +1,4 @@
-interface EditionData {
+export interface EditionData {
   number: number;
   name: string;
   publishedAt: string;

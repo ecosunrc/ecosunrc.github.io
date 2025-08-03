@@ -22,6 +22,7 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/data/*": ["data/*"],
+      "@/notas/*": ["notas/*"],
       "@/*": [
         "./src/*"
       ]

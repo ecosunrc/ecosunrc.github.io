@@ -1,12 +1,12 @@
-import Nota from '../../../../src/components/notas/Nota';
-import InterviewCard from '../../../../src/components/cards/InterviewCard';
+import InterviewCard from '../../../components/cards/InterviewCard';
 
-export default function NotaEstudiantil() {
+export default function Nota() {
   return (
-    <Nota
-      title='¿Qué modelo de universidad queremos defender?'
-      publishedAt='11 de agosto de 2025'
-    >
+    <>
+      <header className='border-b border-white/20 pb-4 mb-6'>
+        <h1>¿Qué modelo de universidad queremos defender?</h1>
+        <p className='text-right text-white/70 mt-2'>Publicado el 11 de agosto de 2025</p>
+      </header>
       <p>
         La Universidad Nacional de Río Cuarto (UNRC) cuenta con más de 15.000 estudiantes, que representan aproximadamente al 10% de la población de la ciudad. Es la segunda universidad más grande de Córdoba, posicionándose como una de las más importantes de la provincia.
         <br />
@@ -47,6 +47,6 @@ export default function NotaEstudiantil() {
       <h2>
         ¿Qué modelo de universidad queremos defender?
       </h2>
-    </Nota>
+    </>
   );
 }

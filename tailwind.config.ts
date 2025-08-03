@@ -39,7 +39,13 @@ const config: Config = {
         winkySans: ['Winky Sans', 'sans-serif'],
         winkyRough: ['Winky Rough', 'sans-serif'],
         mouse: ['Mouse Memoirs', 'sans-serif'],
-      }
+      },
+      colors: {
+        base1: 'var(--color-base1)',
+        base2: 'var(--color-base2)',
+        base3: 'var(--color-base3)',
+        base4: 'var(--color-base4)',
+      },
     },
   },
   darkMode: 'class',

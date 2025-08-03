@@ -24,10 +24,10 @@ export default function MobileHeader() {
         </Link>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className='p-2 focus:outline-none'
+          className='p-2 focus:outline-none bg-base1 rounded-md'
         >
           <Image
-            src={isOpen ? '/imagenes/ico/close.png' : '/imagenes/ico/menu.png'}
+            src={isOpen ? '/imagenes/ico/close.svg' : '/imagenes/ico/menu.svg'}
             alt={isOpen ? 'Cerrar menú' : 'Abrir menú'}
             width={24}
             height={24}

@@ -24,6 +24,9 @@
 @theme {
   --color-base1: #194b4d;
   --color-base2: #ffb454;
+  --color-base3: #319497;
+  --color-base4: #FFC67B;
+
 }
 
 @theme inline {
@@ -53,8 +56,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ededed;
+    --foreground: #0a0a0a;
   }
 }
 

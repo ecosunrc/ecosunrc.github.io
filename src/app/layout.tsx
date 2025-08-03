@@ -21,10 +21,14 @@ export default function RootLayout({
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
       </head>
-      <body className='max-w-screen-sm sm:max-w-screen mx-auto'>
-        <Header />
-        {children}
-        <Footer />
+      <body>
+        <div className='flex flex-col min-h-screen max-w-screen-sm sm:max-w-screen mx-auto'>
+          <Header />
+          <main className='my-auto'>
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
