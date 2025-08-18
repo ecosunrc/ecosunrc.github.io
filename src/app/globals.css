@@ -161,3 +161,7 @@ p {
     font-size: 2.25rem;
   }
 }
+
+strong {
+  font-weight: 900; /* o bolder */
+}

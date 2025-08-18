@@ -18,14 +18,14 @@ interface SectionCardLinks {
 
 export const sections: string[] = [
   'Estudiantil',
-  'Local',
+  'Nacional',
   'Universidad',
   'Suplemento',
 ];
 
 export const linksNav: SectionCardLinks[] = [
   { name: 'Estudiantil', href: '/seccion/estudiantil', description: 'Últimas noticias en el ámbito estudiantil', image: 'https://www.lv16.com.ar/archivos/img/o/179253_1692914351_834.jpg' },
-  { name: 'Local', href: '/seccion/local', description: '¿Qué está pasando en nuestros alrededores?', image: 'https://cesarlerena.com.ar/wp-content/uploads/2023/10/Mapa-Bicontinetal-Espacios-Maritimos-scaled.jpg' },
+  { name: 'Nacional', href: '/seccion/nacional', description: '¿Qué está pasando en nuestros alrededores?', image: 'https://cesarlerena.com.ar/wp-content/uploads/2023/10/Mapa-Bicontinetal-Espacios-Maritimos-scaled.jpg' },
   { name: 'Universidad', href: '/seccion/universidad', description: 'Últimas noticias en el ámbito universitario', image: 'https://dc.exa.unrc.edu.ar/images/slider7001400/militancy3.jpg' },
   { name: 'Suplemento', href: '/seccion/suplemento', description: 'Explora más de nuestro contenido', image: 'https://sudoku-puzzles.net/wp-content/puzzles/asterisk-sudoku/easy/1.png' },
 ];
@@ -36,7 +36,7 @@ export const linksDropdown: TypeLink[] = [
 ];
 
 export const linksSocialMedia: SocialMediaLink[] = [
-  { type: 'wsp', src: 'https://wa.me/+5493584377720' },
+  // { type: 'wsp', src: 'https://wa.me/+5493584377720' },
   { type: 'ig', src: 'https://www.instagram.com/ecosunrc' },
-  { type: 'twitter', src: 'https://www.x.com/' }
+  { type: 'twitter', src: 'https://x.com/ECOSUNRC' }
 ];

@@ -27,14 +27,14 @@ export const sectionsData = {
     className: '',
     alt: 'img universidad',
   },
-  local: {
-    section: 'local',
+  nacional: {
+    section: 'nacional',
     title: '¿Puede funcionar la universidad con el presupuesto actual?',
-    lastImage: '/imagenes/portadas/local.webp',
+    lastImage: '/imagenes/portadas/nacional.webp',
     images: [],
-    link: '/local',
+    link: '/nacional',
     className: '',
-    alt: 'img local',
+    alt: 'img nacional',
   },
   suplemento: {
     section: 'suplemento',

@@ -1,20 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { XCircleIcon, ChevronLeftIcon, ChevronRightIcon, MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
 import 'react-pdf/dist/Page/TextLayer.css';
 import Image from 'next/image';
+import Loading from './Loading';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
-
-function Loading() {
-  return (
-    <div role='status' className='flex justify-center items-center h-32'>
-      <div className='animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full'></div>
-    </div>
-  );
-}
 
 export default function PDFViewer({ file }: { file: string }) {
   const [numPages, setNumPages] = useState(0);
@@ -83,7 +76,7 @@ export default function PDFViewer({ file }: { file: string }) {
             renderAnnotationLayer={false}
             renderTextLayer={false}
             scale={zoom}
-            loading={Loading}
+            loading={<Loading />}
           />
         </div>
       );
@@ -95,7 +88,7 @@ export default function PDFViewer({ file }: { file: string }) {
             renderAnnotationLayer={false}
             renderTextLayer={false}
             scale={zoom}
-            loading={Loading}
+            loading={<Loading />}
           />
         </div>
       );
@@ -107,7 +100,7 @@ export default function PDFViewer({ file }: { file: string }) {
             renderAnnotationLayer={false}
             renderTextLayer={false}
             scale={zoom}
-            loading={Loading}
+            loading={<Loading />}
           />
           {currentIndex + 1 <= numPages && (
             <Page
@@ -115,7 +108,7 @@ export default function PDFViewer({ file }: { file: string }) {
               renderAnnotationLayer={false}
               renderTextLayer={false}
               scale={zoom}
-              loading={Loading}
+              loading={<Loading />}
             />
           )}
         </div>
@@ -133,13 +126,13 @@ export default function PDFViewer({ file }: { file: string }) {
         renderAnnotationLayer={false}
         renderTextLayer={false}
         scale={zoom}
-        loading={Loading}
+        loading={<Loading />}
         className='my-4 shadow-lg'
       />
     ));
 
   return (
-    <Document file={file} onLoadSuccess={onDocumentLoadSuccess} loading={Loading}>
+    <Document file={file} onLoadSuccess={onDocumentLoadSuccess} loading={<Loading />}>
       {!showFull ? (
         <div className='relative items-center'>
           <Page
@@ -147,7 +140,7 @@ export default function PDFViewer({ file }: { file: string }) {
             renderAnnotationLayer={false}
             renderTextLayer={false}
             scale={zoom}
-            loading={Loading}
+            loading={<Loading />}
             className='my-4 shadow-xl'
           />
           <button

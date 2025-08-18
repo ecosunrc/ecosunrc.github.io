@@ -3,16 +3,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import GalleryCard from '@/components/cards/GalleryCard';
-import { editionsData } from '@/data/editionsData';
+// import { editionsData } from '@/data/editionsData';
 
 export default function SectionClient({ sectionData }: { sectionData: any }) {
-  const editionNumbers = Object.keys(editionsData).map(Number).sort((a, b) => a - b);
-  const lastEdition = editionNumbers[editionNumbers.length - 1];
+  // const editionNumbers = Object.keys(editionsData).map(Number).sort((a, b) => a - b);
+  // const lastEdition = editionNumbers[editionNumbers.length - 1];
 
   return (
     <div className='flex flex-col md:flex-row min-h-screen bg-gradient-to-b from-base2/50 to-base2/100 items-center justify-center mt-8 lg:mt-0 p-8 lg:!p'>
       <div className='w-full md:w-1/2 md:h-screen h-64 p-4 md:p-8 flex items-center justify-center'>
-        <Link
+        {/* <Link
           href={`/ediciones/${lastEdition}${sectionData.link}`}
           title={sectionData.title}
           className='relative w-full h-full md:h-2/3'
@@ -27,7 +27,7 @@ export default function SectionClient({ sectionData }: { sectionData: any }) {
             <h3 className='text-white'>{sectionData.title}</h3>
             <p className='text-white'>{sectionData.section}</p>
           </div>
-        </Link>
+        </Link> */}
       </div>
       <div className='w-full md:w-1/2 p-4 md:p-8 flex items-center justify-center'>
         <GalleryCard section={sectionData.section} />

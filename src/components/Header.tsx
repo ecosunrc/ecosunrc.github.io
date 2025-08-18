@@ -5,11 +5,11 @@ import SocialMediaIcon from './SocialMediaIcon';
 import Link from 'next/link';
 import { linksNav, linksDropdown, linksSocialMedia } from './Links';
 import MobileHeader from './MobileHeader';
-import { editionsData } from '@/data/editionsData';
+// import { editionsData } from '@/data/editionsData';
 
 export default function Header() {
-  const editionNumbers = Object.keys(editionsData).map(Number).sort((a, b) => a - b);
-  const lastEdition = editionNumbers[editionNumbers.length - 1];
+  // const editionNumbers = Object.keys(editionsData).map(Number).sort((a, b) => a - b);
+  // const lastEdition = editionNumbers[editionNumbers.length - 1];
   return (
     <>
       <header className='global-header hidden xl:flex fixed w-full top-0 z-50 font-button'>
@@ -29,15 +29,15 @@ export default function Header() {
             <SideNav linksNav={linksNav} linksDropdown={linksDropdown} />
           </div>
           <div className='flex items-center gap-2 ml-auto bg-base1 rounded-b-md text-white px-2'>
-            <Link href={`/ediciones/${lastEdition}`} className='flex w-fit h-full justify-center items-center text-lg p-1 rounded-md hover:underline transition-all duration-300'>
+            <Link href={`/ediciones/1`} className='flex w-fit h-full justify-center items-center text-lg p-1 rounded-md hover:underline transition-all duration-300'>
               Última edición
-              <Image
+              {/* <Image
                 src='/imagenes/logo/logo-square.svg'
                 alt='Icono de última edición'
                 width={24}
                 height={24}
-                className='mx-2 p-1 bg-base2 rounded-md hover:scale-140 transition-transform duration-300'
-              />
+                className='mx-2 p-1 bg-base2 rounded-md'
+              /> */}
             </Link>
             {linksSocialMedia.map((link) => (
               <SocialMediaIcon

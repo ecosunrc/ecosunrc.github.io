@@ -3,20 +3,21 @@
 import Link from 'next/link';
 import { sections } from '@/components/Links';
 import dynamic from 'next/dynamic';
+import {data as editionData} from './data';
 
 const PDFViewer = dynamic(() => import('@/components/PDFViewer'), {
   ssr: false,
 });
 
-export default function Edicion({ editionData }: { editionData: any }) {
+export default function Edicion() {
   return (
-    <div className='bg-gradient-to-b from-base2/50 to-base2/100 px-4 py-8'>
+    <div className='px-4 py-8'>
       <div className='flex flex-col items-center gap-8 mt-8 lg:max-w-6xl mx-auto'>
         <div className='flex flex-col justify-center w-fit min-h-[80vh]'>
           <div className='flex justify-between mb-4 items-center'>
-            {editionData.pdf && (
+            {editionData.pdfPath && (
               <a
-                href={editionData.pdf}
+                href={editionData.pdfPath}
                 download
                 className='p-2 bg-base1 rounded text-center w-fit hover:scale-105 transition'
               >
@@ -26,7 +27,7 @@ export default function Edicion({ editionData }: { editionData: any }) {
           </div>
           <div className='flex w-full'>
             <PDFViewer
-              file={editionData.pdf}
+              file={editionData.pdfPath}
             />
           </div>
           <p className='text-gray-800 text-left '>

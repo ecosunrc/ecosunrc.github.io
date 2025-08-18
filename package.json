@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.2.0",
     "@heroui/card": "^2.2.23",
     "@material-tailwind/react": "^3.0.0-beta.24",
+    "@tanstack/react-virtual": "^3.13.12",
     "gray-matter": "^4.0.3",
     "next": "15.4.1",
     "pdfjs-dist": "^5.4.54",
