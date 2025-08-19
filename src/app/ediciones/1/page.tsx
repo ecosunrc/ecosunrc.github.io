@@ -38,7 +38,7 @@ export default function Edicion() {
           {sections.map((section) => (
             <Link
               key={section}
-              href={`/ediciones/${editionData.number}/${section.toLowerCase()}`}
+              href={`/ediciones/1/${section.toLowerCase()}`}
               className='w-fit p-3 text-white hover:text-base1 hover:scale-105'
             >
               <h4>

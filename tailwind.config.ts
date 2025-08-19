@@ -46,6 +46,10 @@ const config: Config = {
         base3: 'var(--color-base3)',
         base4: 'var(--color-base4)',
       },
+      screens: {
+        '3xl': '1920px',
+        '4xl': '2560px',
+      },
     },
   },
   darkMode: 'class',

@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import InterviewCard from '@/components/cards/InterviewCard';
 import Image from 'next/image';
-import { data } from './data';
+import { data } from '../estudiantil/data';
 import Loading from '@/components/Loading';
 import { useEffect, useState } from 'react';
 
@@ -30,12 +30,12 @@ export default function Nota() {
   return (
     <>
       <div className='py-10'></div>
-      <p className='mx-auto w-fit font-mono text-white text-center bg-base3 p-1'>{pathSection.toUpperCase()}</p>
-      <header className='flex flex-col text-center border-y-2 border-black my-2'>
+      <p className='mx-auto w-fit font-mono text-white text-center bg-black p-1'>{pathSection.toUpperCase()}</p>
+      <header className='flex flex-col text-center border-y-2 border-black my-2 px-10'>
         <h1 className='text-center text-base1 py-4' style={{ textShadow: 'none' }}>{data.title}</h1>
         <p className='text-right text-gray-900 mt-2 italic mb-4'>{data.date}</p>
       </header>
-      <h4 className='italic text-black max-w-3xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl mx-auto' style={{ textShadow: 'none' }}>Peligra el funcionamiento de nuestra universidad, y con ello el bienestar estudiantil. Te detallamos sobre el deterioro de las becas y el menú universitario en nuestra UNRC.</h4>
+      <h4 className='italic text-black max-w-3xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl mx-auto px-10' style={{ textShadow: 'none' }}>Peligra el funcionamiento de nuestra universidad, y con ello el bienestar estudiantil. Te detallamos sobre el deterioro de las becas y el menú universitario en nuestra UNRC.</h4>
       <br />
       <div className='relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[550px] xl:h-[700px] 2xl:h-[800px] mt-6'>
         <Image
@@ -46,7 +46,7 @@ export default function Nota() {
         />
       </div>
       {epigrafe()}
-      <main className='prose prose-lg prose-invert max-w-3xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl mx-auto py-8 text-black'>
+      <main className='prose prose-lg prose-invert max-w-3xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl mx-auto p-8 text-black'>
         
         <p>
           La <a href='https://www.unrc.edu.ar/' target='_blank' rel='noreferrer'> <strong className='hover:underline'>Universidad Nacional de Río Cuarto (UNRC)</strong></a> cuenta con más de <strong>15.000 estudiantes</strong>, que representan aproximadamente al 10% de la población de la ciudad. Es la segunda universidad más grande de Córdoba, posicionándose como una de las más importantes de la provincia.
@@ -163,7 +163,7 @@ export default function Nota() {
           Por esta razón, desde la Asamblea Estudiantil impulsamos reclamos que abren un debate que atraviesa a toda la comunidad educativa:  
         </p>
         <h3 className='text-base1 mt-8 mb-4 text-center'>
-          ¿Qué modelo de universidad queremos defender?
+          ¿QUÉ MODELO DE UNIVERSIDAD QUEREMOS DEFENDER?
         </h3>
 
       </main>
