@@ -1,7 +1,7 @@
 import { EditionData } from '../../data';
 
 export const data: EditionData = {
-  title: '¿Qué modelo de universidad queremos defender?',
+  title: '¿QUÉ MODELO DE UNIVERSIDAD QUEREMOS DEFENDER?',
   date: 'Lunes, 18 de agosto de 2025',
   images: [
     '/ediciones/1/estudiantil-1.jpg',
