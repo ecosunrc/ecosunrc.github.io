@@ -1,8 +1,9 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from 'next/image';
-import { sectionsData } from '@/data/sectionsData';
 import Typewriter from 'typewriter-effect';
+import { sectionsData } from 'app/ediciones/1/data';
+import Link from 'next/link';
 
 interface CarouselComponentProps {
   deviceType?: string;
@@ -52,12 +53,12 @@ export default function CarouselComponent({ deviceType = 'desktop' }: CarouselCo
         className='carousel-component w-full min-h-1/2'
       >
         {Object.values(sectionsData).map((item, index) => (
-          <div key={index} className='relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh]'>
+          <Link key={index} href={item.src} className='relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh]'>
             <Image
               src={item.lastImage}
               alt={item.alt}
               fill
-              className={`object-cover w-full h-full ${item.className || ''}`}
+              className={item.className || 'object-cover object-center'}
               sizes='(max-width: 768px) 100vw, 100vw'
             />
             <div className='absolute bottom-0 left-0 right-0 bg-black/50 p-4'>
@@ -65,7 +66,7 @@ export default function CarouselComponent({ deviceType = 'desktop' }: CarouselCo
                 {item.title}
               </h1>
             </div>
-          </div>
+          </Link>
         ))}
       </Carousel>
     </>
