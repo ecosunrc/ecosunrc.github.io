@@ -2,10 +2,10 @@
 import { usePathname } from 'next/navigation';
 import Dropdown from './Dropdown';
 import Link from 'next/link';
-import { TypeLink } from './Links';
+import { TypeLink, SectionCardLinks } from './Links';
 
 interface SideNavProps {
-  linksNav: TypeLink[];
+  linksNav: SectionCardLinks[];
   linksDropdown: TypeLink[];
 }
 

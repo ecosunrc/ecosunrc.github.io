@@ -3,4 +3,3 @@ export interface EditionData {
   date: string;
   images: string[];
 }
-

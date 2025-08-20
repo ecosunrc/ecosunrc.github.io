@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { XCircleIcon, ChevronLeftIcon, ChevronRightIcon, MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -9,12 +9,20 @@ import Loading from './Loading';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-export default function PDFViewer({ file }: { file: string }) {
+export default function PDFViewer({ file, onlyView = false }: { file: string, onlyView?: boolean }) {
   const [numPages, setNumPages] = useState(0);
   const [showFull, setShowFull] = useState(false);
   const [twoPages, setTwoPages] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(1);
   const [zoom, setZoom] = useState(window.innerWidth < 500 ? 0.6 : 1);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
 
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
@@ -117,7 +125,14 @@ export default function PDFViewer({ file }: { file: string }) {
 
     return pages;
   };
-
+  
+  if (onlyView) {
+  return (
+    <Document file={file} onLoadSuccess={onDocumentLoadSuccess} loading={<Loading/>}>
+      <Page pageNumber={1} height={isMobile ? 212 : 464} renderAnnotationLayer={false} renderTextLayer={false} loading={<Loading/>}/>
+    </Document>
+  );
+}
   const renderAllPages = () =>
     Array.from({ length: numPages }, (_, i) => (
       <Page

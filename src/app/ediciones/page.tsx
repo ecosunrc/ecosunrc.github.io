@@ -1,5 +1,10 @@
 'use client';
 import { linksDropdown as editions } from '@/components/Links';
+import dynamic from 'next/dynamic';
+
+const PDFViewer = dynamic(() => import('@/components/PDFViewer'), {
+  ssr: false,
+});
 
 export default function Ediciones() {
   return (
@@ -8,11 +13,11 @@ export default function Ediciones() {
         <h1 className='text-center text-base1 mt-3 p-4 rounded w-full max-w-lg'>
           Ediciones
         </h1>
-        <ul className='list-disc pl-5 space-y-3'>
+        <ul className='space-y-3'>
           {editions.map((edition) => (
             <li key={edition.name}>
-              <a href={edition.href} className='text-xl lg:text-2xl text-base1 hover:underline'>
-                {edition.name}
+              <a href={edition.href} className=''>
+                <PDFViewer file={edition.pdfSrc} onlyView/>
               </a>
             </li>
           ))}

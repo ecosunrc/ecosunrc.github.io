@@ -2,14 +2,17 @@ export interface TypeLink {
   name: string;
   href: string;
   style?: string;
+  pdfSrc: string;
 }
 
 export interface SocialMediaLink {
   type: 'wsp' | 'ig' | 'twitter';
   src: string;
+  color?: 'green' | 'black';
+  size?: number;
 }
 
-interface SectionCardLinks {
+export interface SectionCardLinks {
   name: string;
   href: string;
   description?: string;
@@ -31,7 +34,7 @@ export const linksNav: SectionCardLinks[] = [
 ];
 
 export const linksDropdown: TypeLink[] = [
-  { name: '1', href: '/ediciones/1' },
+  { name: '1', href: '/ediciones/1', pdfSrc: '/ediciones/1/revista.pdf' },
   // { name: '2', href: '/ediciones/2' },
 ];
 

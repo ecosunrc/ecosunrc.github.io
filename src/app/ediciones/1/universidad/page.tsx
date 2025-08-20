@@ -75,17 +75,20 @@ export default function Nota() {
         <br />
 
         <p>
-          ¿Qué implica esto? Básicamente <strong>los proyectos deben adaptarse a los intereses de estas empresas y no del desarrollo del país,  profundizando la concentración de información en manos de unos pocos.</strong>
+          ¿Qué implica esto? Básicamente <strong>los proyectos deben adaptarse a los intereses de las empresas y no a fomentar el desarrollo del país, profundizando la concentración de información en manos de unos pocos.</strong>
         </p>
 
         <h3 className='text-base1 mt-8 mb-4 border-t-2 border-black pt-4'>En nuestra UNRC</h3>
         <p>
-          Al igual que sucede a nivel nacional, <strong>nuestra universidad también se sostiene con aportes externos.</strong> Históricamente, han habido <strong>convenios con Bayer o BIO4</strong>, proyectos financiados por la <strong>Agencia I+D+i</strong>, programas de emprendedurismo junto a la <strong>Agencia Córdoba Innovar y Emprender</strong> (que opera con un esquema público-privado), e incluso <strong>congresos o actividades universitarias</strong> (posibles gracias al apoyo de patrocinadores y redes externas) son ejemplos de cómo <strong>nuestra ciencia depende de recursos que no siempre provienen del presupuesto del Estado.</strong>
+          Al igual que sucede a nivel nacional, <strong>nuestra universidad también se sostiene con aportes externos.</strong> Históricamente, ha habido <strong>convenios con Bayer o BIO4</strong>, proyectos financiados por la <strong>Agencia I+D+i</strong>, programas de emprendedurismo junto a la <strong>Agencia Córdoba Innovar y Emprender</strong> (que opera con un esquema público-privado), e incluso <strong>congresos o actividades universitarias</strong> (posibles gracias al apoyo de patrocinadores y redes externas). Estos son ejemplos que demuestran cómo <strong>nuestra ciencia depende de recursos que no siempre provienen del presupuesto del Estado.</strong>
         </p>
         <br />
-        
         <p>
-          Hoy, <strong>docentes de física</strong> recurren a iniciativas creativas como <strong>vender yerba</strong>, como gesto de visibilización del conflicto, para mostrar el deterioro que sufre año a año la inversión pública,  <strong>"Estamos formados para otra cosa"</strong>, destacaba el docente Rodrigo Ponzio en una entrevista. Son muestras claras de que <strong>la comunidad universitaria no es indiferente: se organiza y busca sostener sus espacios frente al vaciamiento.</strong>
+          Ante el creciente deterioro en el ámbito científico y educativo, que nos afecta directamente como sociedad, investigadores y docentes se ven en la necesidad de visibilizar la situación de precariedad en la que deben trabajar.
+        </p>
+        <br />
+        <p>
+          En nuestra universidad, <strong>profesores de Física</strong> recurren a iniciativas creativas como <strong>vender yerba</strong>, para llamar la atención sobre la crisis demostrando el claro desfinanciamiento en el ámbito. <strong>"Estamos formados para otra cosa"</strong>, expresó el docente Rodrigo Ponzio en una entrevista a Canal 10 Córdoba. Son muestras claras de que <strong>la comunidad universitaria no es indiferente: se organiza y busca sostener sus espacios frente al vaciamiento.</strong>
         </p>
         <div className='relative mx-auto w-full sm:w-1/2 h-[50px] sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] 2xl:h-[350px] mt-6'>
           <Image
