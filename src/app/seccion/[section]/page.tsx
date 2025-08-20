@@ -3,8 +3,12 @@ import Image from 'next/image';
 import GalleryCard from '@/components/cards/GalleryCard';
 import { sectionsData } from './data';
 
-export default function SectionPage({ params }: any) {
-  const { section } = params as { section: string };
+interface PageProps {
+  params: Promise<{ section: string }>;
+}
+
+export default async function SectionPage({ params }: PageProps) {
+  const { section } = await params;
 
   const sectionData = sectionsData.find(
     (s) => s.sectionData.section.toLowerCase() === section.toLowerCase()
