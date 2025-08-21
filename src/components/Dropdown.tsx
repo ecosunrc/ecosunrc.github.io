@@ -12,7 +12,7 @@ interface DropdownProps {
 
 export default function Dropdown({ name, linksDropdown, isMobile = false }: DropdownProps) {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
-  const pathname = usePathname().split('ediciones/')[1];
+  const pathname = usePathname().split('ediciones/');
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
   const closeDropdown = () => setIsOpen(false);
@@ -26,7 +26,7 @@ export default function Dropdown({ name, linksDropdown, isMobile = false }: Drop
         onClick={isMobile ? toggleDropdown : undefined}
         onMouseEnter={!isMobile ? () => setIsOpen(true) : undefined}
         className={`hover:underline hover:scale-105 text-lg xl:p-3  ${
-          pathname === 'ediciones' ? 'underline' : ''
+          pathname[0] === '/ediciones' ? 'underline' : ''
         } ${isOpen? 'xl:underline' : ''}
         `}
       >
@@ -44,7 +44,7 @@ export default function Dropdown({ name, linksDropdown, isMobile = false }: Drop
               key={link.name}
               href={link.href}
               className={`p-2 hover:bg-base1 hover:text-white ${
-                pathname === link.href.split('ediciones/')[1]
+                pathname[1] === link.href.split('ediciones/')[1]
                   ? 'bg-base1 text-white'
                   : ''
               }`}

@@ -27,7 +27,7 @@ export default function CarouselComponent({ deviceType = 'desktop' }: CarouselCo
         <h1 className='flex text-center text-base1 px-4 py-12 min-h-64 items-center mt-8 max-h-1/2'>
           <Typewriter
             options={{
-              strings: ['Bienvenido a la revista estudiantil de la UNRC: ECOS', 'Un espacio para la voz de los estudiantes', 'Sumá tu voz al eco estudiantil', 'Explorá nuestras ediciones y secciones'],
+              strings: ['Bienvenido a la revista estudiantil de la UNRC: ECOS', 'Un espacio para la voz de los estudiantes', 'Sumá tu voz al eco estudiantil', 'Explorá nuestras ediciones y secciones', 'Seguinos en nuestras redes para no perderte nada'],
               autoStart: true,
               loop: true,
               deleteSpeed: 40,
@@ -53,7 +53,7 @@ export default function CarouselComponent({ deviceType = 'desktop' }: CarouselCo
         className='carousel-component w-full min-h-1/2'
       >
         {Object.values(sectionsData).map((item, index) => (
-          <Link key={index} href={item.src} className='relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh]'>
+          <Link key={index} href={item.src} className='relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh]'>
             <Image
               src={item.lastImage}
               alt={item.alt}

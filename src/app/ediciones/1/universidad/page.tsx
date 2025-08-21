@@ -61,12 +61,12 @@ export default function Nota() {
         <p>
           Recientemente se viralizó la expedición de la fundación Schmidt Ocean en el <strong>cañón submarino de Mar Del Plata</strong>, en la que <strong>científicos del Conicet</strong> exploran a casi 4 km de profundidad. Hallazgos como la <strong>“estrella culona” o “Batatita”</strong> fueron furor en el mundo y la bandera Argentina flameó con orgullo, pero <strong>¿qué hay detrás de toda esta tendencia?</strong>
         </p>
-        <div className='relative w-full h-[100px] sm:h-[200px] md:h-[300px] lg:h-[400px] xl:h-[500px] 2xl:h-[550px] my-6'>
+        <div className='relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px] my-6'>
           <Image
             src={data.images[1]}
             alt='Imagen2 de la nota universidad'
             fill
-            className='object-cover object-top rounded-lg shadow-lg'
+            className='object-contain'
           />
         </div>
         <p>
@@ -90,12 +90,12 @@ export default function Nota() {
         <p>
           En nuestra universidad, <strong>profesores de Física</strong> recurren a iniciativas creativas como <strong>vender yerba</strong>, para llamar la atención sobre la crisis demostrando el claro desfinanciamiento en el ámbito. <strong>"Estamos formados para otra cosa"</strong>, expresó el docente Rodrigo Ponzio en una entrevista a Canal 10 Córdoba. Son muestras claras de que <strong>la comunidad universitaria no es indiferente: se organiza y busca sostener sus espacios frente al vaciamiento.</strong>
         </p>
-        <div className='relative mx-auto w-full sm:w-1/2 h-[50px] sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] 2xl:h-[350px] mt-6'>
+        <div className='relative mx-auto w-full sm:w-1/2 h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px] mt-6'>
           <Image
             src={data.images[3]}
             alt='Imagen3 de la nota universidad'
             fill
-            className='object-cover rounded-lg shadow-lg'
+            className='object-contain'
           />
         </div>
         <br />

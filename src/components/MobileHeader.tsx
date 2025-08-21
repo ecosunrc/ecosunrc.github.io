@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 
 export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname().split('/')[1];
+  const pathname = usePathname().split('seccion/')[1];
 
   return (
     <header className='xl:hidden fixed top-0 left-0 w-full bg-white/90 z-50 shadow-md font-button text-white'>
@@ -45,7 +45,7 @@ export default function MobileHeader() {
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className={`text-lg ${pathname === link.href.split('/')[1]
+              className={`text-lg ${pathname === link.href.split('seccion/')[1]
               ? 'underline'
               : ''}`}
             >
