@@ -57,7 +57,7 @@ export default function Nota() {
         </p>
 
         <div className="relative w-full mt-6">
-          <div className="float-left w-1/3 mr-4 mb-4">
+          <div className="float-left w-1/2 sm:w-1/3 mr-4 mb-4">
             <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px]">
               <Image
                 src={data.images[2]}
@@ -103,7 +103,7 @@ export default function Nota() {
           />
         </div>
         <div className="relative w-full mt-6">
-          <div className="float-right w-1/3 ml-4 mb-4">
+          <div className="float-right w-1/2 sm:w-1/3 ml-4 mb-4">
             <InfoCard
               title="¿SABÍAS QUE...?"
               content={<p className="mt-4 text-sm text-black font-medium">Si vivís a una distancia de <strong>entre 50 y 100 km</strong> de Río Cuarto el total de gasto mensual por viajar los 20 días de cursada es de <strong>más de $400.000</strong></p>}
