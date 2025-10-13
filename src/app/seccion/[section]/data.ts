@@ -10,16 +10,16 @@ export const sectionsData: {sectionData: SectionData, lastFiveNotes: SectionData
   {
     sectionData: {
       section: 'Estudiantil',
-      title: '¿Qué modelo de universidad queremos defender?',
-      image: '/ediciones/1/estudiantil-1.jpg',
-      src: '/ediciones/1/estudiantil',
+      title: 'NO VOY EN TREN, NI EN AVIÓN',
+      image: '/ediciones/2/estudiantil-2.png',
+      src: '/ediciones/2/estudiantil',
       alt: 'Descripción de la sección 1',
     },
     lastFiveNotes: [
       {
         section: 'Estudiantil',
-        title: 'Proximamente',
-        image: '/ediciones/1/estudiantil-2.jpg',
+        title: '¿Qué modelo de universidad queremos defender?',
+        image: '/ediciones/1/estudiantil-1.jpg',
         src: '/ediciones/1/estudiantil',
         alt: 'Alt1',
       },
@@ -56,16 +56,16 @@ export const sectionsData: {sectionData: SectionData, lastFiveNotes: SectionData
   {
     sectionData: {
       section: 'Universidad',
-      title: 'LA CIENCIA ¿ARGENTINA?',
-      image: '/ediciones/1/conicet-3.png',
-      src: '/ediciones/1/universidad',
+      title: 'VIAJES UNIVERSITARIOS: FIE',
+      image: '/ediciones/2/fie-2.jpg',
+      src: '/ediciones/2/universidad',
       alt: 'Descripción de la sección 2',
     },
     lastFiveNotes: [
       {
         section: 'Universidad',
-        title: 'Proximamente',
-        image: '/ediciones/1/conicet-2.jpg',
+        title: 'LA CIENCIA ¿ARGENTINA?',
+        image: '/ediciones/1/conicet-3.png',
         src: '/ediciones/1/universidad',
         alt: 'Alt1',
       },
@@ -102,16 +102,16 @@ export const sectionsData: {sectionData: SectionData, lastFiveNotes: SectionData
   {
     sectionData: {
       section: 'Nacional',
-      title: '¿Puede funcionar la universidad con el presupuesto actual?',
-      image: '/ediciones/1/nacional-1.jpg',
-      src: '/ediciones/1/nacional',
+      title: 'EL MOVIMIENTO ESTUDIANTIL NO SE TOMA VACACIONES',
+      image: '/ediciones/2/nacional-12.jpg',
+      src: '/ediciones/2/nacional',
       alt: 'Descripción de la sección 3',
     },
     lastFiveNotes: [
       {
         section: 'Nacional',
-        title: 'Proximamente',
-        image: '/ediciones/1/nacional-2.jpg',
+        title: '¿Puede funcionar la universidad con el presupuesto actual?',
+        image: '/ediciones/1/nacional-1.jpg',
         src: '/ediciones/1/nacional',
         alt: 'Alt1',
       },

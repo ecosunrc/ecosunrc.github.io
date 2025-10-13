@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 interface InterviewCardProps {
-  nombre: string;
-  fecha: string;
+  nombre?: string;
+  fecha?: string;
   cita: string;
   imagen?: string;
   color: 1 | 2;

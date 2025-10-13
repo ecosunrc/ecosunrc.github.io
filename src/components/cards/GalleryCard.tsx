@@ -48,12 +48,12 @@ export default function GalleryCard( { sectionsData }: GalleryCardProps) {
             className='object-fit'
             src={sectionsData[2].image}
           />
+          <CardFooter className='absolute bg-black/40 bottom-0 z-10 border-default-600 dark:border-default-100'>
+            <div className='flex flex-col grow gap-2 items-center'>
+              <p className='text-white'>{sectionsData[2].title}</p>
+            </div>
+          </CardFooter>
         </Link>
-        <CardFooter className='absolute bg-black/40 bottom-0 z-10 border-default-600 dark:border-default-100'>
-          <div className='flex flex-col grow gap-2 items-center'>
-            <p className='text-white'>Próx.</p>
-          </div>
-        </CardFooter>
       </Card>
       <Card className='hidden lg:flex col-span-4 lg:col-span-4 h-[220px] lg:h-[260px] md:h-[300px]'>
         <Link href={sectionsData[3].src}>

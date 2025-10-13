@@ -29,7 +29,7 @@ export default function Header() {
             <SideNav linksNav={linksNav} linksDropdown={linksDropdown} />
           </div>
           <div className='flex items-center gap-2 ml-auto bg-base1 rounded-b-md text-white px-2'>
-            <Link href={`/ediciones/1`} className='flex w-fit h-full justify-center items-center text-lg p-1 rounded-md hover:underline transition-all duration-300'>
+            <Link href={`/ediciones/2`} className='flex w-fit h-full justify-center items-center text-lg p-1 rounded-md hover:underline transition-all duration-300'>
               Última edición
               {/* <Image
                 src='/imagenes/logo/logo-square.svg'

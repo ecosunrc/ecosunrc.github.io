@@ -1,0 +1,9 @@
+{
+	"Wrap with strong": {
+		"prefix": "str",
+		"body": [
+			"<strong>$TM_SELECTED_TEXT</strong>"
+		],
+		"description": "Envuelve el texto seleccionado con <strong>"
+	}
+}

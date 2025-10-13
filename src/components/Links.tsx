@@ -35,7 +35,7 @@ export const linksNav: SectionCardLinks[] = [
 
 export const linksDropdown: TypeLink[] = [
   { name: '1', href: '/ediciones/1', pdfSrc: '/ediciones/1/revista.pdf' },
-  // { name: '2', href: '/ediciones/2' },
+  { name: '2', href: '/ediciones/2', pdfSrc: '/ediciones/2/revista.pdf' }
 ];
 
 export const linksSocialMedia: SocialMediaLink[] = [
