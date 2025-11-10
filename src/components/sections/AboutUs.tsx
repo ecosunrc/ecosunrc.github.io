@@ -14,9 +14,9 @@ export default function AboutUs() {
           El propósito de esta revista es <strong>construir un espacio de comunicación y expresión abierto a todos los estudiantes</strong>, donde podamos organizarnos para visibilizar las problemáticas que nos afectan como comunidad y luchar por una mejor universidad.
           <br />
           <br />
-          Te invitamos a ser parte:
+          Te invitamos a ser parte.
         </p>
-        <h3 className='text-center'>¡SUMA TU VOZ AL ECO ESTUDIANTIL!</h3>
+        <h3 className='text-center'>¡SUMÁ TU VOZ AL ECO ESTUDIANTIL!</h3>
       </div>
     </>
   );

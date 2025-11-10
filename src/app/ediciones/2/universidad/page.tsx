@@ -94,7 +94,7 @@ export default function Nota() {
           nombre='Lucas Mondino Masuco'
           fecha='Septiembre, 2025'
           cita='Sí, por supuesto, estamos todos muy agradecidos con la universidad por habernos provisto esta experiencia. Prácticamente no tuvimos gastos porque todo lo que fue el paquete del FIE fue subsidiado por el Banco de la Nación y lo que fue el viaje de ida y vuelta fue provisto por la universidad, el colectivo propio de la Uni. A más de uno nos posibilitó haber podido ir, ya que de otro modo probablemente muchos no hubiéramos podido.'
-          imagen='/imagenes/entrevistados/lucas-mondino.jpg'
+          imagen='/imagenes/entrevistados/lucas-mondino.webp'
           color={1}
           pregunta='¿Te parece importante que la universidad contribuya a la realización de este tipo de actividades recreativas?'
         />

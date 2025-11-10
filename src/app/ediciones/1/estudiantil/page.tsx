@@ -149,7 +149,7 @@ export default function Nota() {
           nombre='Celeste Escudero'
           fecha='Junio, 2025'
           cita='Cada vez se venden menos menúes, cada vez son menos los estudiantes que acceden y cada vez es más alto el costo y menor la calidad. El menú existe como una política histórica de bienestar que intenta que el estudiante se pueda sostener en la universidad.'
-          imagen='/imagenes/entrevistados/celeste-escudero2.jpg'
+          imagen='/imagenes/entrevistados/celeste-escudero2.webp'
           color={1}
         />
         <br />
