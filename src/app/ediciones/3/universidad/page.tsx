@@ -54,7 +54,7 @@ export default function Nota() {
           El Destacamento de Inteligencia 141 Gral. Iribarren tenía a su cargo cuatro secciones, referidas a: <strong>política</strong>, dedicada a la inteligencia; <strong>calle</strong>, encargada de los seguimientos, escuchas e infiltraciones; <strong>operaciones especiales (OP3)</strong>, que administraba el centro clandestino, y <strong>logística</strong>, la cual gestionaba el material que permitía el funcionamiento del accionar represivo. Todo esto sucede en el marco de un <strong>plan sistemático de persecución política</strong>, operado por la última dictadura cívico militar argentina. 
         </p>
         <br />
-        <div className='float-right ml-2 w-1/3 sm:w-1/4 mr-4 mb-4'>
+        <div className='float-right ml-2 w-1/2 sm:w-1/4 mr-4 mb-4'>
           <div className='relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px]'>
             <Image
               src={data.images[1]}
