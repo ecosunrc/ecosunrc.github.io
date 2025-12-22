@@ -17,6 +17,11 @@ export default function AboutUs() {
           Te invitamos a ser parte.
         </p>
         <h3 className='text-center'>¡SUMÁ TU VOZ AL ECO ESTUDIANTIL!</h3>
+        <br />
+        <br />
+        <p className="text-center text-white bg-base1 py-2 px-4 rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
+          <a href="/miembros">Conocé a los miembros</a>
+        </p>
       </div>
     </>
   );

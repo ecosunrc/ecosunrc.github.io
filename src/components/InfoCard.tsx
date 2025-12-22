@@ -19,13 +19,13 @@ export default function InfoCard({
       className={`relative flex flex-col p-4 rounded-md shadow-md ${bgColor} text-${accentColor} w-fit max-w-sm`}
     >
       <div
-        className={`absolute -top-4 left-4 bg-${accentColor} rounded-md p-1`}
+        className={`absolute -top-4 left-4 bg-${accentColor} rounded-md p-1 shadow-lg`}
       >
-        <h3 className="px-2">!</h3>
+        <h3 className="px-2 text-base1">!</h3>
       </div>
 
       <div className="mt-8">
-        <h3 className="uppercase">
+        <h3 className="uppercase text-black">
           {title}
         </h3>
         {content}

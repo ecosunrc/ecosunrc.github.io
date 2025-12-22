@@ -1,6 +1,5 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import InterviewCard from '@/components/cards/InterviewCard';
 import Image from 'next/image';
 import { data } from '../estudiantil/data';
 import Loading from '@/components/Loading';
@@ -16,7 +15,7 @@ export default function Nota() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 500); 
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -47,7 +46,7 @@ export default function Nota() {
         />
       </div>
       <main className='prose prose-lg prose-invert max-w-3xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl mx-auto p-8 text-black'>
-        
+
         <p>
           La ciudad de Río Cuarto cuenta con <strong>más de 60 barrios</strong> y una población aproximada de <strong>180.000 habitantes</strong>, lo que la convierte en la <strong>segunda localidad más grande</strong> de la provincia. La Universidad Nacional de Río Cuarto (UNRC) se encuentra ubicada en el extremo noreste de la ciudad, dentro de la jurisdicción del gobierno de Las Higueras.
         </p>
@@ -89,7 +88,7 @@ export default function Nota() {
 
 
         <h3 className='text-base1 mt-8 mb-4 border-t-2 border-black pt-4'>Lucha estudiantil</h3>
-        
+
         <p className='mt-4'>
           En septiembre del año pasado, tras las <strong>continuas manifestaciones del movimiento estudiantil</strong>, las autoridades de la universidad solicitaron a la provincia, a través del CiDi, la <strong>extensión del boleto</strong>. Por otro lado, en el mes de noviembre los estudiantes nos movilizamos hacia el Centro Cívico de Río Cuarto y entregamos una nota exigiendo que <strong>se garantice el BEG de febrero a diciembre</strong>, con <strong>más de 1000 firmas</strong> que avalaron el reclamo. Luego de <strong>un año sin respuestas</strong> por parte del gobierno provincial, nos seguimos organizando. Para visibilizar la problemática, empapelamos la universidad con la consigna: <strong>“BEG de febrero a diciembre para todos los estudiantes”.</strong>
         </p>
@@ -111,12 +110,12 @@ export default function Nota() {
               accentColor="base2 border-4 border-base1 text-base1"
             />
           </div>
-        <p>
-          El pasado nueve de septiembre, los estudiantes <strong>universitarios</strong>, acompañados por la <strong>Unión de Estudiantes Secundarios (UES)</strong>, presentamos en el Consejo Superior una nota avalada por el claustro estudiantil. En la misma, solicitamos que las autoridades articulen con la UTI (Unidad de Tecnología de la Información) para <strong>enviar los datos</strong> de los “aspirantes” a la provincia y considerarlos como“alumnos efectivos”, habilitándolos así a acceder al BEC. Ante el reclamo, el Rectorado afirmó que <strong>el conflicto se profundiza</strong> debido a que <strong>el calendario académico no contempla a febrero, marzo y finales de diciembre como meses con actividades universitarias.</strong>
-        </p>
+          <p>
+            El pasado nueve de septiembre, los estudiantes <strong>universitarios</strong>, acompañados por la <strong>Unión de Estudiantes Secundarios (UES)</strong>, presentamos en el Consejo Superior una nota avalada por el claustro estudiantil. En la misma, solicitamos que las autoridades articulen con la UTI (Unidad de Tecnología de la Información) para <strong>enviar los datos</strong> de los “aspirantes” a la provincia y considerarlos como“alumnos efectivos”, habilitándolos así a acceder al BEC. Ante el reclamo, el Rectorado afirmó que <strong>el conflicto se profundiza</strong> debido a que <strong>el calendario académico no contempla a febrero, marzo y finales de diciembre como meses con actividades universitarias.</strong>
+          </p>
         </div>
         <br />
-         <div className='flex my-6'>
+        <div className='flex my-6'>
           <div className='relative w-1/2 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[650px]'>
             <Image
               src={data.images[3]}

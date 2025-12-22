@@ -11,7 +11,7 @@ export default function Nota() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 500); 
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -51,7 +51,7 @@ export default function Nota() {
         </p>
         <br />
         <p>
-          El Destacamento de Inteligencia 141 Gral. Iribarren tenía a su cargo cuatro secciones, referidas a: <strong>política</strong>, dedicada a la inteligencia; <strong>calle</strong>, encargada de los seguimientos, escuchas e infiltraciones; <strong>operaciones especiales (OP3)</strong>, que administraba el centro clandestino, y <strong>logística</strong>, la cual gestionaba el material que permitía el funcionamiento del accionar represivo. Todo esto sucede en el marco de un <strong>plan sistemático de persecución política</strong>, operado por la última dictadura cívico militar argentina. 
+          El Destacamento de Inteligencia 141 Gral. Iribarren tenía a su cargo cuatro secciones, referidas a: <strong>política</strong>, dedicada a la inteligencia; <strong>calle</strong>, encargada de los seguimientos, escuchas e infiltraciones; <strong>operaciones especiales (OP3)</strong>, que administraba el centro clandestino, y <strong>logística</strong>, la cual gestionaba el material que permitía el funcionamiento del accionar represivo. Todo esto sucede en el marco de un <strong>plan sistemático de persecución política</strong>, operado por la última dictadura cívico militar argentina.
         </p>
         <br />
         <div className='float-right ml-2 w-1/2 sm:w-1/4 mr-4 mb-4'>
@@ -84,7 +84,7 @@ export default function Nota() {
         </p>
         <br />
         <p>
-          El día 16 de septiembre del presente año se inició una <strong>nueva exploración</strong> en los terrenos pertenecientes al ex Centro Clandestino de Detención. Luego de cinco días de trabajo hallaron <strong>restos óseos humanos que aún deben ser analizados</strong> para saber si se les puede extraer ADN. La metodología utilizada para llevar a cabo estas tareas consta de cuatro momentos: <strong>inventario</strong>, donde se recolectan testimonios y evidencia fotográfica del territorio con el fin de delimitar posibles zonas de fosas clandestinas; <strong>exploración del subsuelo</strong>, se inspeccionan las áreas delimitadas de manera superficial y subterránea; <strong>exhumación</strong>, se desentierran los restos óseos y otras evidencias, e <strong>identificación</strong>, se examinan las muestras extraídas. <strong>La intervención de los geólogos de la UNRC es fundamental</strong>, especialmente, para las dos primeras etapas del procedimiento, en las cuales se analizan fotografías, mapas, uso y tipo de suelo. Esto último tiene como objetivo precisar las zonas que, posteriormente, serán exploradas con métodos geofísicos y geomecánicos como el Georradar. 
+          El día 16 de septiembre del presente año se inició una <strong>nueva exploración</strong> en los terrenos pertenecientes al ex Centro Clandestino de Detención. Luego de cinco días de trabajo hallaron <strong>restos óseos humanos que aún deben ser analizados</strong> para saber si se les puede extraer ADN. La metodología utilizada para llevar a cabo estas tareas consta de cuatro momentos: <strong>inventario</strong>, donde se recolectan testimonios y evidencia fotográfica del territorio con el fin de delimitar posibles zonas de fosas clandestinas; <strong>exploración del subsuelo</strong>, se inspeccionan las áreas delimitadas de manera superficial y subterránea; <strong>exhumación</strong>, se desentierran los restos óseos y otras evidencias, e <strong>identificación</strong>, se examinan las muestras extraídas. <strong>La intervención de los geólogos de la UNRC es fundamental</strong>, especialmente, para las dos primeras etapas del procedimiento, en las cuales se analizan fotografías, mapas, uso y tipo de suelo. Esto último tiene como objetivo precisar las zonas que, posteriormente, serán exploradas con métodos geofísicos y geomecánicos como el Georradar.
         </p>
         <div className='flex my-6'>
           <div className='relative w-1/2 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[650px]'>
@@ -93,7 +93,7 @@ export default function Nota() {
               alt='Imagen2 de la nota universidad'
               fill
               className='object-cover rounded-lg shadow-lg'
-              />
+            />
           </div>
           <div className='relative w-1/2 h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[650px]'>
             <Image
@@ -101,7 +101,7 @@ export default function Nota() {
               alt='Imagen3 de la nota universidad'
               fill
               className='object-cover rounded-lg shadow-lg'
-              />
+            />
           </div>
         </div>
         <div className='flex my-6'>

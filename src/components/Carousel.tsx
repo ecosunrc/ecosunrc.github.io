@@ -2,7 +2,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
-import { sectionsData } from 'app/ediciones/3/data';
+import { sectionsData } from 'app/ediciones/4/data';
 import Link from 'next/link';
 
 interface CarouselComponentProps {

@@ -6,7 +6,7 @@ export interface TypeLink {
 }
 
 export interface SocialMediaLink {
-  type: 'wsp' | 'ig' | 'twitter';
+  type: 'wsp' | 'ig' | 'twitter' | 'info';
   src: string;
   color?: 'green' | 'black';
   size?: number;
@@ -36,11 +36,13 @@ export const linksNav: SectionCardLinks[] = [
 export const linksDropdown: TypeLink[] = [
   { name: '1', href: '/ediciones/1', pdfSrc: '/ediciones/1/revista.pdf' },
   { name: '2', href: '/ediciones/2', pdfSrc: '/ediciones/2/revista.pdf' },
-  { name: '3', href: '/ediciones/3', pdfSrc: '/ediciones/3/revista.pdf' }
+  { name: '3', href: '/ediciones/3', pdfSrc: '/ediciones/3/revista.pdf' },
+  { name: '4', href: '/ediciones/4', pdfSrc: '/ediciones/4/revista.pdf' },
 ];
 
 export const linksSocialMedia: SocialMediaLink[] = [
   // { type: 'wsp', src: 'https://wa.me/+5493584377720' },
   { type: 'ig', src: 'https://www.instagram.com/ecosunrc' },
-  { type: 'twitter', src: 'https://x.com/ECOSUNRC' }
+  { type: 'twitter', src: 'https://x.com/ECOSUNRC' },
+  { type: 'info', src: '/miembros' }
 ];
