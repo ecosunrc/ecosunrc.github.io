@@ -13,10 +13,10 @@ export default function Ediciones() {
         <h1 className='text-center text-base1 mt-3 p-4 rounded w-full max-w-lg'>
           Ediciones
         </h1>
-        <ul className='flex gap-3'>
+        <ul className='grid grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3'>
           {editions.map((edition) => (
             <li key={edition.name}>
-              <a href={edition.href} className=''>
+              <a href={edition.href}>
                 <PDFViewer file={edition.pdfSrc} onlyView />
               </a>
             </li>

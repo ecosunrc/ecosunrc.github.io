@@ -9,17 +9,37 @@ interface SectionData {
 
 export const sections: string[] = [
     'Estudiantil',
-    'Local',
-    'Nacional'
+    'Local'
 ];
 
 export const data: any = {
-    date: 'Lunes, 1 de Diciembre de 2025',
-    pdfPath: '/ediciones/4/revista.pdf',
+    date: 'Lunes, 23 de Febrero de 2026',
+    pdfPath: '/ediciones/5/revista.pdf',
     sections: sections
 };
 
 export const sectionsData: SectionData[] = [
+    {
+        section: 'Estudiantil',
+        title: 'GUÍA PARA EL INGRESANTE',
+        lastImage: '/ediciones/5/ingresantes-1.webp',
+        alt: 'Descripción de la sección Estudiantil',
+        src: '/ediciones/5/estudiantil',
+    },
+    {
+        section: 'Local',
+        title: '¡OTRA VEZ SOPA! EL NUEVO SISTEMA DE TRANSPORTE',
+        lastImage: '/ediciones/5/transporte-5.webp',
+        alt: 'Descripción de la sección Local',
+        src: '/ediciones/5/local',
+    },
+    {
+        section: 'Universidad',
+        title: 'La Perla: La UNRC hace historia',
+        lastImage: '/ediciones/3/universidad-4.webp',
+        alt: 'Descripción de la sección Universidad',
+        src: '/ediciones/3/universidad',
+    },
     {
         section: 'Estudiantil',
         title: 'LA NUEVA UNIVERSIDAD ARGENTINA',
@@ -40,13 +60,6 @@ export const sectionsData: SectionData[] = [
         lastImage: '/ediciones/4/paleo-2.webp',
         alt: 'Descripción de la sección Nacional',
         src: '/ediciones/4/nacional',
-    },
-    {
-        section: 'Universidad',
-        title: 'La Perla: La UNRC hace historia',
-        lastImage: '/ediciones/3/universidad-4.webp',
-        alt: 'Descripción de la sección Universidad',
-        src: '/ediciones/3/universidad',
     },
     {
         section: 'Suplemento',

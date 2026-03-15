@@ -10,12 +10,19 @@ export const sectionsData: { sectionData: SectionData, lastFiveNotes: SectionDat
   {
     sectionData: {
       section: 'Estudiantil',
-      title: 'LA NUEVA UNIVERSIDAD ARGENTINA',
-      image: '/ediciones/4/sacau-1.webp',
-      src: '/ediciones/4/estudiantil',
-      alt: 'Descripción de la sección 1',
+      title: 'LA GUÍA PARA EL INGRESANTE',
+      image: '/ediciones/5/ingresantes-1.webp',
+      src: '/ediciones/5/estudiantil',
+      alt: 'Guía para el ingresante 2026',
     },
     lastFiveNotes: [
+      {
+        section: 'Estudiantil',
+        title: 'LA NUEVA UNIVERSIDAD ARGENTINA',
+        image: '/ediciones/4/sacau-1.webp',
+        src: '/ediciones/4/estudiantil',
+        alt: 'Descripción de la sección 1',
+      },
       {
         section: 'Estudiantil',
         title: 'NO VOY EN TREN, NI EN AVIÓN',
@@ -29,13 +36,6 @@ export const sectionsData: { sectionData: SectionData, lastFiveNotes: SectionDat
         image: '/ediciones/1/estudiantil-1.webp',
         src: '/ediciones/1/estudiantil',
         alt: 'Alt1',
-      },
-      {
-        section: 'Estudiantil',
-        title: 'Próximamente',
-        image: '/ediciones/1/estudiantil-3.webp',
-        src: '/ediciones/1/estudiantil',
-        alt: 'Alt2',
       },
       {
         section: 'Estudiantil',
@@ -148,12 +148,19 @@ export const sectionsData: { sectionData: SectionData, lastFiveNotes: SectionDat
   {
     sectionData: {
       section: 'Suplemento',
-      title: 'FERIA DEL LIBRO JUAN FILLOY',
-      image: '/ediciones/4/feria-3.webp',
-      src: '/ediciones/4/local',
+      title: '¡OTRA VEZ SOPA! EL SISTEMA DE TRANSPORTE',
+      image: '/ediciones/5/transporte-5.webp',
+      src: '/ediciones/5/local',
       alt: 'Descripción de la sección 1',
     },
     lastFiveNotes: [
+      {
+        section: 'Suplemento',
+        title: 'FERIA DEL LIBRO JUAN FILLOY',
+        image: '/ediciones/4/feria-3.webp',
+        src: '/ediciones/4/local',
+        alt: 'Descripción de la sección 1',
+      },
       {
         section: 'Suplemento',
         title: 'GENERACIÓN Z A LAS CALLES',
@@ -167,13 +174,6 @@ export const sectionsData: { sectionData: SectionData, lastFiveNotes: SectionDat
         image: '/imagenes/logo/logo-square.svg',
         src: '/ediciones/1/suplemento',
         alt: 'Alt1',
-      },
-      {
-        section: 'Suplemento',
-        title: 'Próximamente',
-        image: '/imagenes/logo/logo-square.svg',
-        src: '/ediciones/1/suplemento',
-        alt: 'Alt2',
       },
       {
         section: 'Suplemento',

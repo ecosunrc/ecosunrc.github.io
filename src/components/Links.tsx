@@ -38,6 +38,7 @@ export const linksDropdown: TypeLink[] = [
   { name: '2', href: '/ediciones/2', pdfSrc: '/ediciones/2/revista.pdf' },
   { name: '3', href: '/ediciones/3', pdfSrc: '/ediciones/3/revista.pdf' },
   { name: '4', href: '/ediciones/4', pdfSrc: '/ediciones/4/revista.pdf' },
+  { name: '5', href: '/ediciones/5', pdfSrc: '/ediciones/5/revista.pdf' },
 ];
 
 export const linksSocialMedia: SocialMediaLink[] = [
